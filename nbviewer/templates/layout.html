@@ -119,44 +119,6 @@
     {% block body %}{% endblock %}
   </div>{% endblock container %}
 
-
-  {% block footer %}
-    <footer class="footer hidden-print">
-      <div class="container">
-        <div class="col-md-4">
-          <p>
-            This website does not host notebooks, it only renders notebooks
-            available on other websites.
-          </p>
-        </div>
-
-        <div class="col-md-4">
-          <p>
-            Delivered by <a href="http://www.fastly.com/">Fastly</a>,
-            Rendered by <a href="https://developer.rackspace.com/?nbviewer=awesome">Rackspace</a>
-          </p>
-          <p>
-            nbviewer GitHub <a href="https://github.com/jupyter/nbviewer">repository</a>.
-          </p>
-        </div>
-
-        <div class="col-md-4">
-          {% block version_info %}
-            {% if git_data %}
-              <p>
-                nbviewer version:
-                <a href="https://github.com/jupyter/nbviewer/commit/{{git_data['sha']}}">
-                  {{git_data['sha'][:7]}}
-                </a>
-              </p>
-            {% endif %}
-          {% endblock version_info %}
-          {% block extra_footer %}{% endblock extra_footer %}
-        </div>
-      </div>
-    </footer>
-  {% endblock footer %}
-
   <script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script>
   <script src="{{ static_url("components/bootstrap/js/bootstrap.min.js") }}"></script>
   <script src="{{ static_url("components/headroom.js/dist/headroom.min.js") }}"></script>
