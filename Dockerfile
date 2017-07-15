@@ -1,7 +1,7 @@
-# Using the Ubuntu image
+# Using the Ubuntu image 
 FROM debian:jessie
 
-MAINTAINER Project Jupyter <jupyter@googlegroups.com>
+MAINTAINER Rob Forgione <rforgione@gmail.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=C.UTF-8
